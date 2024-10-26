@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import type { Hex } from "viem";
 import { useAccount, useConnect, usePublicClient, useSignMessage } from "wagmi";
 import { SiweMessage } from "siwe";
-import { cbWalletConnector } from "wagmi/experimental";
+import { walletConnect } from 'wagmi/connectors';
 
 export function ConnectAndSIWE() {
   const { connect } = useConnect({
@@ -54,7 +54,7 @@ export function ConnectAndSIWE() {
 
   return (
     <div>
-      <button onClick={() => connect({ connector: cbWalletConnector })}>
+      <button onClick={() => connect({ connector: walletConnect })}>
         Connect + SIWE
       </button>
       <p>{}</p>
