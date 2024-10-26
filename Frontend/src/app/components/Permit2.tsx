@@ -7,7 +7,7 @@ import {
   import ms from "ms";
   import { useMemo, useState } from "react";
   import type { Hex } from "viem";
-  import { parseErc6492Signature } from "viem/experimental";
+  import { parseErc6492Signature } from "viem";
   import { useAccount, useReadContract, useSignTypedData } from "wagmi";
   import { useWriteContracts } from "wagmi/experimental";
   
